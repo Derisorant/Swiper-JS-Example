@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --text: #04060c;
+  --background: #f4f4fb;
+  --primary: #495fbe;
+  --secondary: #dab399;
+  --accent: #b1ce76;
+  --green: #64E687;
+
+  --aquarium-text: #5C77FA;
+  --cinema-text: #FF2523;
+  --bowling-text: #CFFFF3;
+  --hotel-text: #D7EBFA;
+
+  --aquarium-background: #394999;
+  --cinema-background: #9C3428;
+  --bowling-background: #358773;
+  --hotel-background: #194260;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--background);
+  background-color: var(--background);
+  font-family: "Poppins";
+  font-size: large;
+  font-weight: 500;
+}
+
+.swiper-slide {
+  transition: 0.3s;
+  width: fit-content;
+  height: 500px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.swiper-slide > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiper-slide > h2 {
+  margin-top: 60px;
+}
+
+.swiper-slide:hover {
+  transition: 0.3s;
+  scale: 0.95;
+}
+
+.gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+span.highlight {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  color: var(--green);
+}
+
+#aquarium .gradient { background-image: linear-gradient(to bottom, var(--aquarium-background), transparent); }
+#aquarium h2 { color: var(--aquarium-text); }
+.swiper-slide:hover#aquarium { filter: drop-shadow(var(--aquarium-background) 0px 0px 7.5px);  }
+
+#cinema .gradient {   background-image: linear-gradient(to bottom, var(--cinema-background), transparent); }
+#cinema h2 { color: var(--cinema-text); }
+.swiper-slide:hover#cinema { filter: drop-shadow(var(--cinema-background) 0px 0px 7.5px);  }
+
+#bowling .gradient {   background-image: linear-gradient(to bottom, var(--bowling-background), transparent); }
+#bowling h2 { color: var(--bowling-text); }
+.swiper-slide:hover#bowling { filter: drop-shadow(var(--bowling-background) 0px 0px 7.5px);  }
+
+#hotel .gradient {   background-image: linear-gradient(to bottom, var(--hotel-background), transparent); }
+#hotel h2 { color: var(--hotel-text); }
+.swiper-slide:hover#hotel { filter: drop-shadow(var(--hotel-background) 0px 0px 7.5px);  }
